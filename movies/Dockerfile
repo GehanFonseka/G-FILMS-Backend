@@ -5,7 +5,7 @@ FROM maven:3.8.8-openjdk-17 AS build
 WORKDIR /app
 
 # Copy the entire project to the working directory
-COPY .. .
+COPY . .
 
 # Build the project, skipping tests
 RUN mvn clean package -DskipTests
