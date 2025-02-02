@@ -1,5 +1,5 @@
 # Use Maven base image with JDK 17 for building the application
-FROM maven:3.8.8-jdk-17-slim AS build
+FROM maven:3.8.6-jdk-17-slim AS build
 
 # Set the working directory inside the container to '/app'
 WORKDIR /app
