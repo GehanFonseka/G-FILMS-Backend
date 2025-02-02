@@ -1,5 +1,5 @@
 # Use Maven base image to build the application
-FROM maven:3.8.8-openjdk-17-slim AS build
+FROM maven:3.8.5-openjdk-17 AS build
 
 # Set working directory in the container
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Use OpenJDK 17 for running the app
-FROM openjdk:17-slim
+FROM openjdk:17.0.1-jdk-slim
 
 # Set environment variables for MongoDB connection
 ENV MONGO_DATABASE=movie-api-db
