@@ -11,7 +11,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Use OpenJDK 17 for running the app
-FROM openjdk:17.0.12-slim
+FROM openjdk:17-slim
 
 # Set environment variables for MongoDB connection
 ENV MONGO_DATABASE=movie-api-db
