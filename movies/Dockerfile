@@ -1,5 +1,5 @@
 # Use Maven base image to build the application
-FROM maven:3.8.8-openjdk-17-oracle AS build
+FROM maven:3.8.8-openjdk-17 AS build
 
 # Set working directory in the container
 WORKDIR /app
