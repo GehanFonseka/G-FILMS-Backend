@@ -2,7 +2,7 @@
 FROM maven:3.8.5-openjdk-17 AS build
 
 # Set working directory in the container
-WORKDIR /app
+WORKDIR /app/movies
 
 # Copy the entire project to the working directory
 COPY . .
